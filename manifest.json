@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Sudarshan GPT - AI Agent & Formula Generator for Excel & Sheets",
+  "version": "1.0",
+  "description": "Interact with Google Sheets and Excel Online using AI.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "identity"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://docs.google.com/*", "*://excel.office.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.html", "styles.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sudarshan GPT</title>
+</head>
+<body>
+    <div class="tabs">
+        <button id="talkToAI" class="active">Talk to Sheet AI</button>
+        <button id="formulaGenerator">Formula Generator</button>
+    </div>
+    <div id="content">
+        <div id="aiSection">
+            <h2>Ask a Question</h2>
+            <input type="text" id="aiInput" placeholder="Type your question here...">
+            <button id="submitAI">Submit</button>
+            <div id="aiResponse"></div>
+        </div>
+        <div id="formulaSection" class="hidden">
+            <h2>Generate Formula</h2>
+            <input type="text" id="formulaInput" placeholder="Describe your formula...">
+            <button id="submitFormula">Generate</button>
+            <div id="formulaResponse"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
