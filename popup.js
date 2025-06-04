@@ -14,7 +14,7 @@ document.getElementById('formulaGenerator').addEventListener('click', () => {
 
 document.getElementById('submitAI').addEventListener('click', async () => {
     const question = document.getElementById('aiInput').value;
-    const result = await askGPT(`Generate a Google Sheets formula for: ${prompt}`);
+    const response = await fetchAIResponse(question);
     document.getElementById('aiResponse').innerText = response;
 });
 
